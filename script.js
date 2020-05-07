@@ -74,7 +74,7 @@ function checker(event) {
 function startTime() {
   timer = setInterval(function () { 
      timeLeft --
-     timerEl.textcontent = "Time: " + timeLeft
+     timerEl.textContent = "Time: " + timeLeft
      if (timeLeft === 0){
          endGame()
      }
@@ -83,7 +83,7 @@ function startTime() {
 
 //function for end of game
 function endGame(){
-    clearInterval(timerInterval)
+    clearInterval(timer)
     questionsEL.textcontent = "Game Over! Your Score is " + timeleft;
     possibleAns.innerHTML ="";
     
@@ -91,7 +91,7 @@ function endGame(){
 
 
 start.addEventListener("click", function(){
-    document.getElementById("start").innerHTML =""
+    document.getElementById("start").innerHTML ="";
     startTime();
     startGame(questionsSelection) ;
 });
