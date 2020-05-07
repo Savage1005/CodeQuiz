@@ -2,6 +2,8 @@ var timerEl = document.getElementById("timer")
 var start = document.getElementById("start")
 var questionsEL = document.getElementById("questions")
 var possibleAns = document.getElementById("possibleAns")
+var results = document.getElementById("results")
+
 var timeLeft = 75
 var currentQuestion = 0
 
@@ -82,12 +84,14 @@ function startTime() {
 }
 
 //function for end of game
-function endGame(){
+function endGame() {
     clearInterval(timer)
-    questionsEL.textcontent = "Game Over! Your Score is " + timeleft;
+    questionsEL.innerHTML ="";
     possibleAns.innerHTML ="";
-    
+    results.textContent = `Game Over! Your Score is ${timeLeft}!!!!`;
+    console.log()
 }
+
 
 
 start.addEventListener("click", function(){
