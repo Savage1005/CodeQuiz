@@ -89,7 +89,6 @@ function endGame() {
     questionsEL.innerHTML ="";
     possibleAns.innerHTML ="";
     results.textContent = `Game Over! Your Score is ${timeLeft}!!!!`;
-    console.log()
 }
 
 
